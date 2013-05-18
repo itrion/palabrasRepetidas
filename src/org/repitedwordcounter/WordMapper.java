@@ -1,5 +1,6 @@
 package org.repitedwordcounter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class WordMapper {
@@ -9,6 +10,7 @@ public class WordMapper {
 
     public WordMapper(String textToMap) {
         this.textToMap = textToMap;
+        this.map = new ArrayList<>();
     }
 
     public int size() {

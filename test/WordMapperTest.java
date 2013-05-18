@@ -19,7 +19,7 @@ public class WordMapperTest {
         String threeWords = "one two three";
         WordMapper wordMapper = new WordMapper(threeWords);
         wordMapper.map();
-        assertEquals(0, wordMapper.size());
+        assertEquals(3, wordMapper.size());
     }
 
     @Test
@@ -27,6 +27,6 @@ public class WordMapperTest {
         String threeWords = "one two three one";
         WordMapper wordMapper = new WordMapper(threeWords);
         wordMapper.map();
-        assertEquals(0, wordMapper.size());
+        assertEquals(3, wordMapper.size());
     }
 }
