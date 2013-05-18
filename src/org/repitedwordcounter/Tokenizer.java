@@ -15,9 +15,19 @@ public class Tokenizer {
     }
 
     public String nextWord() {
-        return (tokenizer.hasMoreElements())  ? getNextWord() : null;
+        return (tokenizer.hasMoreElements()) ? getNextWord() : null;
     }
 
+    public void processAllWords() {
+        while(tokenizer.hasMoreTokens())
+            getNextWord();
+    }
+
+    public List<String> getWordsFound() {
+        return wordsFound;
+    }
+    
+    
     private String getSpecialCharacters() {
         return ",._- ";
     }
