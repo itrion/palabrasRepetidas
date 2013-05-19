@@ -19,8 +19,8 @@ public class WordRepitedRemover {
 
     public void removeRepited() {
         String nextWord;
-        while ((nextWord = tokenizer.nextWord()) != null){
-            if(textProcessed.contains(nextWord)) continue;
+        while ((nextWord = tokenizer.nextWord()) != null) {
+            if (textProcessed.contains(nextWord)) continue;
             textProcessed.add(nextWord);
         }
     }

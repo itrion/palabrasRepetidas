@@ -13,17 +13,22 @@ public class RepitedWordCounter {
     }
 
     public int count() {
-        int counter = 0;
         List<String> sourceTextMapped = mapText(sourceText);
         List<String> toCompareTextMapped = mapText(toCompareTest);
-        for (String toCompareWord : toCompareTextMapped)
-            for (String sourceWord : sourceTextMapped)
-                if (toCompareWord.equals(sourceWord))
-                    counter++;
-        return counter;
+        return compareLists(toCompareTextMapped, sourceTextMapped);
     }
 
     private List<String> mapText(String sourceText) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        WordRepitedRemover wordRepitedRemover = new WordRepitedRemover(sourceText);
+        wordRepitedRemover.removeRepited();
+        return wordRepitedRemover.getProcessedWords();
+    }
+
+    private int compareLists(List<String> toCompareTextMapped, List<String> sourceTextMapped) {
+        int repitedWordCounter = 0;
+        for (String toCompareWord : toCompareTextMapped)
+            for (String sourceWord : sourceTextMapped)
+                if (toCompareWord.equals(sourceWord)) repitedWordCounter++;
+        return repitedWordCounter;
     }
 }

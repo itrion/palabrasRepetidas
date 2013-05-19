@@ -2,7 +2,6 @@
 import java.util.Arrays;
 import java.util.List;
 import static junit.framework.Assert.*;
-import org.junit.Assert;
 import org.junit.Test;
 import org.repitedwordcounter.Tokenizer;
 

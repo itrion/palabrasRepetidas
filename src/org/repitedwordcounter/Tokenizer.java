@@ -11,7 +11,7 @@ public class Tokenizer {
 
     public Tokenizer(String textToProcess) {
         this.wordsFound = new ArrayList<>();
-        this.tokenizer = new StringTokenizer(textToProcess, getSpecialCharacters(), false);
+        this.tokenizer = new StringTokenizer(textToProcess, getSeparatorCharacters(), false);
     }
 
     public String nextWord() {
@@ -28,7 +28,7 @@ public class Tokenizer {
     }
     
     
-    private String getSpecialCharacters() {
+    private String getSeparatorCharacters() {
         return ",._- ";
     }
 
